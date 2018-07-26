@@ -32,3 +32,25 @@ test(60)
 
 ```
 在 if 和 else 中,需要注意的是 **elif** 这个和 JS 的不一样,比较的特殊.
+## Python- for
+在 Python 中 for 循环是和 JS 中的有非常大的区别的.先看一下一个最简单的例子
+
+```
+def ForFunctionForList(list):
+    for element in list:
+        print(element)
+
+
+ForFunctionForList([1, 2, 3, 4, 5, 6])
+# 1, 2, 3, 4, 5, 6
+```
+在 Python 中可以被 for 循环的有 **列表、字符串、元组** 而在 JS 中字符串是无法被 for 循环直接循环的,但是在 Python 中,却是可以做 for 循环的,这是很奇特的一个知识点
+```
+def ForFunctionForString(string):
+    for element in string:
+        print(element, end=' ')
+
+
+ForFunctionForString('hello')
+
+```
