@@ -14,4 +14,12 @@ def ForFunctionForString(string):
         print(element, end=' ')
 
 
-ForFunctionForString('hello')
+# ForFunctionForString('hello')
+
+
+def ForLoopForTuple(Tuple):
+    for element in Tuple:
+        print(element, len(element), end=' ')
+
+
+# ForLoopForTuple(('n', 'hao', 'ya'))

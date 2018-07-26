@@ -54,3 +54,13 @@ def ForFunctionForString(string):
 ForFunctionForString('hello')
 
 ```
+先来接收一个新的知识点: Tuple ,元组 (xxx,yyy,zzz),元组也是可以被循环的,
+```
+def ForLoopForTuple(Tuple):
+    for element in Tuple:
+        print(element, len(element), end=' ')
+
+
+ForLoopForTuple(('n', 'hao', 'ya'))
+
+```
