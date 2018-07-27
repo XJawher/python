@@ -64,3 +64,34 @@ def ForLoopForTuple(Tuple):
 ForLoopForTuple(('n', 'hao', 'ya'))
 
 ```
+字典,也就是 JS 中的对象, dictionary, 也是可以被循环的,而且循环的时候类似于 ES6 中的 Object.entries 或者说是 JS 抄的 py 的也说不准,管他呢,用着爽就是了,注意在这个字典的循环中 key 是乱序的
+
+```
+from __future__ import print_function
+
+
+def forFunctionToDict(dict):
+    for key in dict:
+        print(key, dict[key], end=' ')
+
+
+dict = {}
+dict['lan'] = 'python'
+dict['version'] = '2.7'
+dict['platform'] = '64'
+
+forFunctionToDict(dict) # platform 64 lan python version 2.7 
+
+```
+而对于 set 数据,同样的也是可以进行循环,在循环的时候 set 有个特点就是会去重,和上面的字典一样的,在循环的时候输出是乱序的
+```
+def forFunctionToSet(set):
+    for elements in set:
+        print(elements, end=' ')
+
+
+setDataStructure = set(['python', 'python2', 'python3', 'python'])
+forFunctionToSet(setDataStructure)
+
+```
+在上面的字典和 set 中,输出全部是乱序的,如果我们想要输出一个有序的该怎么输出才对呢?
