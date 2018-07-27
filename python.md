@@ -31,7 +31,7 @@ def test(number):
 test(60)
 
 ```
-在 if 和 else 中,需要注意的是 **elif** 这个和 JS 的不一样,比较的特殊.
+在 if 和 else 中,需要注意的是 **elif** 这个和 JS 的不一样,比较的特殊.在判断中 == 才是判断是否相等的条件.
 ## Python- for
 在 Python 中 for 循环是和 JS 中的有非常大的区别的.先看一下一个最简单的例子
 
@@ -115,3 +115,4 @@ def loopOfWhile(condition):
 loopOfWhile(condition)
 
 ```
+在 while 中, condition 比较除了比较常规的 < > <= >= == != 这些返回 true 和 fales 之外,当 condition 值为数字的时候,并且当数字大于0时是为 true,condition 为 none 时返回 false,condition 为集合类型的数据, list dict tuple set 时候当他们的元素不为 0 时返回 true, 当为 0  的时候返回 false
