@@ -32,6 +32,8 @@ test(60)
 
 ```
 在 if 和 else 中,需要注意的是 **elif** 这个和 JS 的不一样,比较的特殊.在判断中 == 才是判断是否相等的条件.
+## Python- 三目运算
+在 JS 中有个三目运算 condition ? value1 : value2,是非常的方便的一个简短处理返回值的方法.在 Python 中,这样的简短处理的方案就是 `var = var1 if condition else var2`
 ## Python- for
 在 Python 中 for 循环是和 JS 中的有非常大的区别的.先看一下一个最简单的例子
 
