@@ -95,3 +95,23 @@ forFunctionToSet(setDataStructure)
 
 ```
 在上面的字典和 set 中,输出全部是乱序的,如果我们想要输出一个有序的该怎么输出才对呢?
+##Python_variable
+Python 的变量要比 JS 的简单太多了, JS 中的变量有7个基本的类型,这7种变量类型中,有四个是非引用类型,两个是引用类型有一个是 ES6 中新增的类型, string,undefined,number,boolean,function,obj,symble,而且在变量声明的时候需要用 let 或者 const 做声明.否则就是一个会报错的无效的变量,然而在 py 中变量是不用这么声明的直接赋值就是了,暂时不清楚是不是存在作用域的问题,需要进一步的探索和研究.
+在 py 中可以同时定义多个变量比如像这样
+`a,b,c=11,12,13`
+##Python_while 循环
+while 循环中的基础的概念和 JS 循环是一致的,在循环中通过 condition 来判断是不是继续循环或者直接 break 跳出循环
+```
+from __future__ import print_function
+condition = 0
+
+
+def loopOfWhile(condition):
+    while condition < 10:
+        print(condition, end=' ')
+        condition = condition + 1
+
+
+loopOfWhile(condition)
+
+```
