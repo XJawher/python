@@ -118,3 +118,37 @@ loopOfWhile(condition)
 
 ```
 在 while 中, condition 比较除了比较常规的 < > <= >= == != 这些返回 true 和 fales 之外,当 condition 值为数字的时候,并且当数字大于0时是为 true,condition 为 none 时返回 false,condition 为集合类型的数据, list dict tuple set 时候当他们的元素不为 0 时返回 true, 当为 0  的时候返回 false
+##Python_函数 参数
+在函数参数这里分为可变的参数或者不变参数,
+
+```
+def report(name, *grades):
+    total_grade = 0
+    for grade in grades:
+        total_grade += grade
+    print(name, 'total grade is ', total_grade)
+```
+
+### 可变参数 *
+
+在上面的代码中 *grades 就是把第一个参数后面的所有的参数都给做成一个集合,就是类似 ES6 中的 ... 一样,只不过在 Python 中 *grades 的属性是 tuple 也就是元组,而在 ES6 中 ... 的属性是数组,这就是不同的地方,不过是类似的,概念是相通的.
+
+###关键字参数 **
+
+在关键字参数中前面是有两个 ** 号,而在可变参数中却是一个 * 号.
+可变参数和关键字参数的不同之处就在于可变参数是会把传入的参数变成一个元组也就是 tuple 而关键字参数会把值变成一个 dictionary 也就是字典, JS 中的 object,
+```
+# keyword parameter
+from __future__ import print_function
+
+
+def keywordParameter(name, **keywordParameter):
+    print('name is', name)
+    for (key, word) in keywordParameter.items():
+        print(key, word, end=' ')
+
+
+keywordParameter('Mike', age=24, country='China', education='bachelor')
+
+```
+在字典的循环中记得和 JS 不同的地方是 **keywordParameter.items()** 这是不一样的地方.
