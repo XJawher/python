@@ -198,3 +198,20 @@ localAndGlovbleVariable()
 ```
 
 ## Read and write files
+
+### open 读文件方式  
+在 open 方式中需要注意的就是传入的参数,'r' 表示 只读, w 表示 写入, r,w 表示可以读写
+
+```
+# Read and write files
+from __future__ import print_function
+
+openFile = open('5_ variable.py', 'r')
+
+openFileContent = openFile.readlines()
+
+print(openFileContent)
+
+```
+在读写文件的时候 .readline 表示读取第一行,继续调用 .readline 表示读取第二行, .readlines 表示把所有的数据都读取并且存在一个 list 中
+## class 类
