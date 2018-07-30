@@ -1,4 +1,5 @@
-##Python-缩进
+## Python-缩进
+
 在 Python 中缩进是非常重要的一个常规知识点,必须要完整的掌握好缩进的关系,这样才能完善的进行 Python 的开发工作.
 不能有空格的地方:
 1. 冒号后面不能有空格
@@ -13,8 +14,8 @@
 在函数和类后面必须要有两行作为换行符
 
 [python 基础语法range](https://docs.pythontab.com/python/python2.7/controlflow.html#range)
-##Python- if and else
 
+## Python- if and else
 
 ```
 def test(number):
@@ -32,9 +33,13 @@ test(60)
 
 ```
 在 if 和 else 中,需要注意的是 **elif** 这个和 JS 的不一样,比较的特殊.在判断中 == 才是判断是否相等的条件.
-## Python- 三目运算
+
+## Python-三目运算
+
 在 JS 中有个三目运算 condition ? value1 : value2,是非常的方便的一个简短处理返回值的方法.在 Python 中,这样的简短处理的方案就是 `var = var1 if condition else var2`
+
 ## Python- for
+
 在 Python 中 for 循环是和 JS 中的有非常大的区别的.先看一下一个最简单的例子
 
 ```
@@ -85,8 +90,10 @@ dict['platform'] = '64'
 forFunctionToDict(dict) # platform 64 lan python version 2.7 
 
 ```
+
 而对于 set 数据,同样的也是可以进行循环,在循环的时候 set 有个特点就是会去重,和上面的字典一样的,在循环的时候输出是乱序的
 ```
+
 def forFunctionToSet(set):
     for elements in set:
         print(elements, end=' ')
@@ -96,12 +103,17 @@ setDataStructure = set(['python', 'python2', 'python3', 'python'])
 forFunctionToSet(setDataStructure)
 
 ```
+
 在上面的字典和 set 中,输出全部是乱序的,如果我们想要输出一个有序的该怎么输出才对呢?
-##Python_variable
+
+## Python_variable
+
 Python 的变量要比 JS 的简单太多了, JS 中的变量有7个基本的类型,这7种变量类型中,有四个是非引用类型,两个是引用类型有一个是 ES6 中新增的类型, string,undefined,number,boolean,function,obj,symble,而且在变量声明的时候需要用 let 或者 const 做声明.否则就是一个会报错的无效的变量,然而在 py 中变量是不用这么声明的直接赋值就是了,暂时不清楚是不是存在作用域的问题,需要进一步的探索和研究.
 在 py 中可以同时定义多个变量比如像这样
 `a,b,c=11,12,13`
-##Python_while 循环
+
+## Python_while 循环
+
 while 循环中的基础的概念和 JS 循环是一致的,在循环中通过 condition 来判断是不是继续循环或者直接 break 跳出循环
 ```
 from __future__ import print_function
@@ -117,8 +129,11 @@ def loopOfWhile(condition):
 loopOfWhile(condition)
 
 ```
+
 在 while 中, condition 比较除了比较常规的 < > <= >= == != 这些返回 true 和 fales 之外,当 condition 值为数字的时候,并且当数字大于0时是为 true,condition 为 none 时返回 false,condition 为集合类型的数据, list dict tuple set 时候当他们的元素不为 0 时返回 true, 当为 0  的时候返回 false
-##Python_函数 参数
+
+## Python_函数 参数
+
 在函数参数这里分为可变的参数或者不变参数,
 
 ```
@@ -133,7 +148,7 @@ def report(name, *grades):
 
 在上面的代码中 *grades 就是把第一个参数后面的所有的参数都给做成一个集合,就是类似 ES6 中的 ... 一样,只不过在 Python 中 *grades 的属性是 tuple 也就是元组,而在 ES6 中 ... 的属性是数组,这就是不同的地方,不过是类似的,概念是相通的.
 
-###关键字参数 **
+### 关键字参数 **
 
 在关键字参数中前面是有两个 ** 号,而在可变参数中却是一个 * 号.
 可变参数和关键字参数的不同之处就在于可变参数是会把传入的参数变成一个元组也就是 tuple 而关键字参数会把值变成一个 dictionary 也就是字典, JS 中的 object,
@@ -151,4 +166,35 @@ def keywordParameter(name, **keywordParameter):
 keywordParameter('Mike', age=24, country='China', education='bachelor')
 
 ```
+
 在字典的循环中记得和 JS 不同的地方是 **keywordParameter.items()** 这是不一样的地方.
+
+## variable 变量
+
+在变量中,分为局部变量,和全局变量
+**Global variable** 全局变量,在使用的时候需要在函数中或者其他的块作用域中做个申明 **global XXX**,这样就是申明这个变量是全局的,不是局部的 XXX 变量,是全局的 XXX 变量
+
+```
+# variable
+from __future__ import print_function
+
+globalVariable = 100
+
+
+def localAndGlovbleVariable():
+    global globalVariable
+    globalVariable = globalVariable + 100
+    print('这是全局变量 globalVariable = ')
+    print(globalVariable)
+    localVariable = 10
+    print('这是局部变量 localVariable = ')
+    print(localVariable)
+
+
+print(globalVariable)
+
+localAndGlovbleVariable()
+
+```
+
+## Read and write files
