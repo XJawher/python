@@ -224,4 +224,53 @@ if __name__ == "__main__":
     xxx
 ```
 
+`"def __init__()"` 所谓的 init 函数就是初始化的意思,就是在类初始化的时候把某些指定的参数赋值给指定的变量
+
             
+
+```
+class testInit:
+    # print(getNumberData)
+    className = 'testInit'
+    price = 19
+
+    def __init__(self, name, price, height, width, weight):
+        self.name = name
+        self.price = price
+        self.height = height
+        self.width = width
+        self.weight = weight
+
+
+testInit = testInit('bad calculator', 18, 17, 16, 15)
+
+print(testInit.name)
+print(testInit.price)
+print(testInit.height)
+print(testInit.width)
+print(testInit.weight)
+```
+而在 class 中也是有默认参数,同样的也是可以用下面的代码表示,但是要注意的地方是在默认参数的时候需要把没有默认参数的放前面,而有默认参数的放到后面去
+
+```
+class testInit:
+    # print(getNumberData)
+    className = 'testInit'
+    price = 19
+
+    def __init__(self, name='123', price=24, height=40, width=100, weight=200):
+        self.name = name
+        self.price = price
+        self.height = height
+        self.width = width
+        self.weight = weight
+
+
+testInit = testInit('bad calculator', 18, 17, 16, 15)
+
+print(testInit.name)
+print(testInit.price)
+print(testInit.height)
+print(testInit.width)
+print(testInit.weight)
+```

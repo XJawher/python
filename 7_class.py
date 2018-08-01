@@ -1,6 +1,6 @@
 from __future__ import print_function
 # from 5_variabe import localAndGlovbleVariable
-from test import localAndGlovbleVariable
+# from test import localAndGlovbleVariable
 
 
 class getNumberData:
@@ -26,14 +26,29 @@ class getNumberData:
 # getNumberData.printSelf()
 
 
-class inheritGetNumberData(getNumberData):
+class testInit:
     # print(getNumberData)
-    pass
+    className = 'testInit'
+    price = 19
 
+    def __init__(self, name, price, height, width, weight):
+        self.name = name
+        self.price = price
+        self.height = height
+        self.width = width
+        self.weight = weight
+
+
+testInit = testInit('bad calculator', 18, 17, 16, 15)
+
+print(testInit.name)
+print(testInit.price)
+print(testInit.height)
+print(testInit.width)
+print(testInit.weight)
 
 # inheritGetNumberData = inheritGetNumberData()
 # inheritGetNumberData.add(20, 30)
 # print(inheritGetNumberData)
 
-localAndGlovbleVariable()
-
+# localAndGlovbleVariable()
