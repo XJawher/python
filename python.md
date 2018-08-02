@@ -2,9 +2,11 @@
 
 在 Python 中缩进是非常重要的一个常规知识点,必须要完整的掌握好缩进的关系,这样才能完善的进行 Python 的开发工作.
 不能有空格的地方:
+
 1. 冒号后面不能有空格
 
 必须有空格的地方:
+
 1. 函数名前必须要有空格
 2. 关键字后面必须要有空格
 3. 参数和运算符前后都要有空格
@@ -32,6 +34,7 @@ def test(number):
 test(60)
 
 ```
+
 在 if 和 else 中,需要注意的是 **elif** 这个和 JS 的不一样,比较的特殊.在判断中 == 才是判断是否相等的条件.
 
 ## Python-三目运算
@@ -43,6 +46,7 @@ test(60)
 在 Python 中 for 循环是和 JS 中的有非常大的区别的.先看一下一个最简单的例子
 
 ```
+
 def ForFunctionForList(list):
     for element in list:
         print(element)
@@ -51,8 +55,10 @@ def ForFunctionForList(list):
 ForFunctionForList([1, 2, 3, 4, 5, 6])
 # 1, 2, 3, 4, 5, 6
 ```
+
 在 Python 中可以被 for 循环的有 **列表、字符串、元组** 而在 JS 中字符串是无法被 for 循环直接循环的,但是在 Python 中,却是可以做 for 循环的,这是很奇特的一个知识点
 ```
+
 def ForFunctionForString(string):
     for element in string:
         print(element, end=' ')
@@ -266,11 +272,20 @@ class testInit:
         self.weight = weight
 
 
-testInit = testInit('bad calculator', 18, 17, 16, 15)
+testInit = testInit('bad calculator', 18, 17, 16)
 
 print(testInit.name)
 print(testInit.price)
 print(testInit.height)
 print(testInit.width)
 print(testInit.weight)
+```
+## input
+input 输入就是输入文字或者数字然后再展示,具体有什么特殊的地方暂时还没有头绪,因为想不到 input 在后端是怎么使用的,不像 JS 有输入输出的交互逻辑,在 py 的 input 中暂时没有好的思绪
+
+```
+from __future__ import print_function
+number_input = input('请输入数字:')
+print('数字是: ', number_input)
+
 ```
