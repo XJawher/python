@@ -67,7 +67,7 @@ def ForFunctionForString(string):
 ForFunctionForString('hello')
 
 ```
-先来接收一个新的知识点: Tuple ,元组 (xxx,yyy,zzz),元组也是可以被循环的,
+先来接收一个新的知识点: Tuple ,元组 (xxx,yyy,zzz),元组也是可以被循环的,元组是一个不可以改变的组成数据结构,元组和列表的技术区别是列表是可 用 append() 方法扩展的,而元组却是一个不可变的数据结构
 ```
 def ForLoopForTuple(Tuple):
     for element in Tuple:
@@ -289,3 +289,23 @@ number_input = input('请输入数字:')
 print('数字是: ', number_input)
 
 ```
+
+## 列表
+列表就是在 JS 中的数组,是一系列的有序的数据数列.在 JS 中数组的内置的方法有很多,像 push pop some filter map forEach concat every find includes jion keys shift sort toString 等有很多这样的内置的方法,在 py 中对于列表的内置方法目前了解到的有如下的几个
+### 列表包含的方法
+list.append(obj) 对列表进行扩展
+list.count(obj) 计算某个元素在列表中出现的次数
+list.extend(seq) 在列表末尾一次性追加另一个序列中的多个值,用新的列表来扩展原来的列表
+list.index(obj) 找到列表的中 obj 的第一个匹配的索引下标值
+list.remove(y) 删除第一个出现 y 的值
+list.pop([index=-1]) 移除列表的末尾的值,并返回该值,默认是最末尾的值,当然也是可以修改的其他的位置的值
+list.reverse() 反转列表
+list.sort() 排序
+list.insert(index, obj) 把对象插入列表
+### 列表包含的函数
+列表包含以下的函数
+cmp(list1,list2) 比较两个列表的元素
+len(list) 返回列表的长度
+max(list) 返回列表的最大的一个元素
+min(list) 返回列表的最小的一个元素
+list(tulpe) 将元组转为列表
