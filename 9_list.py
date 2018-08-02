@@ -1,5 +1,6 @@
 # list
 from __future__ import print_function
+"""
 
 # list.append(obj) 对列表进行扩展
 
@@ -71,5 +72,21 @@ def listSort(example):
 
 listSort(exampleList)
 
+
 def listInsert(example):
-    
+    example.insert(1, 345)
+    print(example)
+
+
+listInsert(exampleList)
+ """
+
+# 开始函数部分
+
+list1, list2 = [456, 'ayz'], ['456', 'abc']
+tulpe = (1, '2,3名', 4, 56)
+print(cmp(list1, list2))
+print(cmp(2000000000000000, '2'))
+print(max(list2))
+print(min(list2))
+print(list(tulpe))

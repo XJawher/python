@@ -294,18 +294,112 @@ print('数字是: ', number_input)
 列表就是在 JS 中的数组,是一系列的有序的数据数列.在 JS 中数组的内置的方法有很多,像 push pop some filter map forEach concat every find includes jion keys shift sort toString 等有很多这样的内置的方法,在 py 中对于列表的内置方法目前了解到的有如下的几个
 ### 列表包含的方法
 list.append(obj) 对列表进行扩展
+
+```
+exampleList = [1, 234, 5, 6, 'a', 'b', 'a', 'a']
+
+
+def listAppend(example):
+    listAppendOflist = example
+    listAppendOflist.append('a')
+    print(listAppendOflist)  # 他会去同步的改变 exampleList 或者说是修改他的指针
+
+
+listAppend(exampleList)
+```
 list.count(obj) 计算某个元素在列表中出现的次数
+
+```
+def listCount(example):
+    print(example.count('a'))
+```
 list.extend(seq) 在列表末尾一次性追加另一个序列中的多个值,用新的列表来扩展原来的列表
+
+```
+def listExtend(aList, bList):
+    aList.extend(bList)
+    print(aList)
+
+
+aList = [123, 'xyz', 'zara', 'abc', 123]
+bList = [2009, 'manni']
+listExtend(aList, bList)
+```
 list.index(obj) 找到列表的中 obj 的第一个匹配的索引下标值
+
+```
+def listIndex(example):
+    print(example.index('a'))
+
+
+listIndex(exampleList)
+```
 list.remove(y) 删除第一个出现 y 的值
+
+```
+def listRemove(example):
+    example.remove('a')
+    print(example)
+    print(exampleList)
+
+
+listRemove(exampleList)
+```
 list.pop([index=-1]) 移除列表的末尾的值,并返回该值,默认是最末尾的值,当然也是可以修改的其他的位置的值
+
+```
+def listPop(example):
+    print(example.pop(1))
+    print(example)
+
+
+listPop(exampleList)
+```
 list.reverse() 反转列表
+
+```
+def listReverse(example):
+    example.reverse()
+    print(example)
+
+
+listReverse(exampleList)
+```
 list.sort() 排序
+
+```
+def listSort(example):
+    example.sort()
+    print(example)
+
+
+listSort(exampleList)
+```
 list.insert(index, obj) 把对象插入列表
+
+```
+def listInsert(example):
+    example.insert(1, 345)
+    print(example)
+
+
+listInsert(exampleList)
+```
+
 ### 列表包含的函数
 列表包含以下的函数
-cmp(list1,list2) 比较两个列表的元素
+cmp(list1,list2) 比较两个列表的元素,从第一个元素开始比较
 len(list) 返回列表的长度
 max(list) 返回列表的最大的一个元素
 min(list) 返回列表的最小的一个元素
 list(tulpe) 将元组转为列表
+
+```
+list1, list2 = [456, 'ayz'], ['456', 'abc']
+tulpe = (1, '2,3名', 4, 56)
+print(cmp(list1, list2))
+print(cmp(2000000000000000, '2'))
+print(max(list2))
+print(min(list2))
+print(list(tulpe))
+```
