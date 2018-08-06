@@ -403,3 +403,5 @@ print(max(list2))
 print(min(list2))
 print(list(tulpe))
 ```
+
+## 字典 dictionary
